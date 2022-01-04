@@ -1,0 +1,9 @@
+hr{
+    border-style: dotted;
+    border-bottom: none;
+    border-width: 8px ;
+    border-radius: 0;
+    background-color: black;
+    color: navajowhite;
+    width: 50%;
+}
