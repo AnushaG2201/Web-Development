@@ -1,3 +1,7 @@
+/*percentage,em can be used for anything with px to be dynamic as well */
+/*em also can be used to font size dynamic-2em - 2 times the width of 'M'*/
+/* if parent has a em(20) or % value and child also has em(40) or percentage,the em value that will be applied is 40+20*/
+/*to avoid this use rem which is remove the root element's percentage or em if it has any*/
 hr{
     border-style: dotted;
     border-bottom: none;
@@ -6,4 +10,104 @@ hr{
     background-color: black;
     color: navajowhite;
     width: 50%;
+}
+/* serif is the fallback font ,since we already have the reference in html we can mention where we need to apply*/
+body{
+    font-family: 'Pushster',sans-serif;
+}
+h1{
+    font-size: 2.5rem;
+    color: #11999E;
+    font-weight: normal;
+    line-height: 2px;
+}
+
+a{
+    color: #11999E
+}
+/*class vs ids refer note */
+/* psuedo class like img:hover{}*/
+/*default styles can also be viewed on the inspect console*/
+
+.divider{
+    background-color: #A3E4DB;
+}
+
+.first{
+    border: 10px solid black;
+    height: 500px;
+    width:400px
+
+
+}
+
+.Second{
+    border: 10px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+.third{
+    border: 10px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+/*default positioing is static .if we change to relative we will able tp contol the positing.for ex the below
+one will move down 50 px
+(from where it was earlier).it may come on top of blue.blue's top doesnt change.
+red doesnt push blue down
+.red{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    position: relative;
+    top:50px;
+}
+.blue{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    position: relative;
+    right:50px;
+}
+*/
+
+/* float right will reverse tge order.if you want blue first red next and green third then use position relative and move right /left */
+div{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    float:right;
+}
+.red{
+
+    background-color: red;
+
+}
+.blue{
+    background-color: blue;
+    right: 4px;
+    float:right;
+}
+.green{
+    background-color: green;
+    right: 8px;
+}
+
+/* absolute posiiton is position relative to the parent.right:30 px will move 30 px from parent's right ,to the left.check yellow's position.
+ it has a right margin of 90 from parent's right.The parent can be the body(whole screen view) or the closest parent element
+ which has the position as relative*/
+
+.yellow{
+    background-color: yellow;
+    position: absolute;
+    right:90px;
+
+}
+/*fixes the position even when scrolled*/
+#head{
+    position: fixed;
+    display: block;
 }
